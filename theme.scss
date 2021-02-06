@@ -48,6 +48,71 @@ body {
     }
 }
 
-input[type=file] {
+input[type='file'] {
     display: none;
+}
+
+.preview {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+
+    &__image {
+        position: relative;
+        margin-bottom: 0.5rem;
+        margin-right: 0.5rem;
+        overflow: hidden;
+        
+
+        &:hover .preview__remove {
+            opacity: 1;
+        }
+
+        &:hover .preview__info {
+            bottom: 0;
+        }
+
+        img {
+            width: 180px;
+            height: auto;
+            vertical-align: top;
+        }
+        
+    }
+    
+
+    &__remove {
+        opacity: 0;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-weight: bold;
+        background: rgba(255, 255, 255, .5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: opacity .22s;
+
+        
+    }
+
+    &__info {
+        position: absolute;
+        right: 0;
+        bottom: -50px;
+        left: 0;
+        height: 24px;
+        font-size: .8rem;
+        background: rgba(255, 255, 255, .5);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: bottom .22s;
+        padding: 0 5px;
+        
+    }
+
 }
