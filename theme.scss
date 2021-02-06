@@ -78,6 +78,13 @@ input[type='file'] {
             vertical-align: top;
         }
         
+        &.removing {
+            transform: scale(0);
+            transition: transform .3s;
+        }
+        
+        
+        
     }
     
 
@@ -116,3 +123,4 @@ input[type='file'] {
     }
 
 }
+

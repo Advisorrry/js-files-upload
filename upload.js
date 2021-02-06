@@ -75,6 +75,9 @@ export function upload(selector, options = {}) {
 
         const block = preview.querySelector(`[data-name="${name}"]`)
         .closest('.preview__image')
+
+        block.classList.add('removing')
+        setTimeout(() => block.remove(), 300)
     }
 
     open.addEventListener('click', triggerInput)
